@@ -128,4 +128,17 @@ go a bit smoother.  You should remove them before moving into a production envir
 
 	   12:09 -> Still working on the error message issue when running sudo puppet apply. 
  
- 
+	   12:25 -> SIMPLE FIX: Add the command '--modulepath=...' to the end of the puppet apply command.
+
+	   12:37 -> Created the 'papply' script (from page 40). Commands below:
+			sudo vi /usr/local/bin/papply 
+				#! /bin/sh
+				sudo puppet apply /home/timm-centos/git/centos/puppet_centos/manifests/site.pp --modulepath='/home/timm-centos/git/centos/puppet_centos/modules' $*
+			sudo chmod a+x /usr/local/bin/papply 
+			papply
+				Notice: Compiled catalog for demo.belkin in environment production in 0.94 seconds
+				Warning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+				   (at /usr/share/ruby/vendor_ruby/puppet/type/package.rb:430:in `block (3 levels) in <module:Puppet>')
+Notice: Finished catalog run in 0.29 seconds 
+
+
