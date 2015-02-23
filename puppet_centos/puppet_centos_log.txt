@@ -126,5 +126,6 @@ go a bit smoother.  You should remove them before moving into a production envir
 			Error: Could not find class httpd for demo.belkin on node demo.belkin
 			Error: Could not find class httpd for demo.belkin on node demo.belkin
 
+	   12:09 -> Still working on the error message issue when running sudo puppet apply. 
  
  
