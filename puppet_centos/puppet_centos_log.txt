@@ -26,6 +26,10 @@
 			Error: /Stage[main]/Main/Node[demo]/Package[nginx]/ensure: change from absent to present failed: Execution of '/bin/yum -d 0 -e 0 -y list nginx' returned 1: Error: No matching Packages to list
 			Notice: Finished catalog run in 46.36 seconds
 
+	   09:57 -> Installing the *AMP stack to replace the 'nginx' which is asked for in the Puppet 3 book. Commands used:
+			sudo yum install httpd # Installs Apache
+			sudo service httpd start # Starts Apache
+			ifconfig eth0 | grep inet | awk '{ print $2 }' # Finds server address
 
-
+ 
  
