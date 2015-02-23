@@ -1,6 +1,6 @@
 node 'demo' { 
 #  include httpd
-  include sudoers
+#  include sudoers
 
 #  file { '/tmp/hello':		# PAGE 30
 #    content => "Hello, world -nodes\n",
