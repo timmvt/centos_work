@@ -29,7 +29,28 @@
 	   09:57 -> Installing the *AMP stack to replace the 'nginx' which is asked for in the Puppet 3 book. Commands used:
 			sudo yum install httpd # Installs Apache
 			sudo service httpd start # Starts Apache
-			ifconfig eth0 | grep inet | awk '{ print $2 }' # Finds server address
+			# THIS COMMAND DID NOT WORK. -> ifconfig eth0 | grep inet | awk '{ print $2 }' # Finds server address.
+			# THIS COMMAND WORKED. -> /sbin/ifconfig
+			enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+		        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+		        inet6 fe80::a00:27ff:fea0:e811  prefixlen 64  scopeid 0x20<link>
+		        ether 08:00:27:a0:e8:11  txqueuelen 1000  (Ethernet)
+		        RX packets 288374  bytes 320028657 (305.2 MiB)
+		        RX errors 0  dropped 0  overruns 0  frame 0
+		        TX packets 74967  bytes 6093405 (5.8 MiB)
+		        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+			lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+		        inet 127.0.0.1  netmask 255.0.0.0
+		        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+		        loop  txqueuelen 0  (Local Loopback)
+		        RX packets 60  bytes 19176 (18.7 KiB)
+		        RX errors 0  dropped 0  overruns 0  frame 0
+		        TX packets 60  bytes 19176 (18.7 KiB)
+		        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+
 
  
  
