@@ -26,7 +26,7 @@
 			Error: /Stage[main]/Main/Node[demo]/Package[nginx]/ensure: change from absent to present failed: Execution of '/bin/yum -d 0 -e 0 -y list nginx' returned 1: Error: No matching Packages to list
 			Notice: Finished catalog run in 46.36 seconds
 
-	   09:57 -> Installing the *AMP stack to replace the 'nginx' which is asked for in the Puppet 3 book. Commands used:
+	   09:57 -> Installing the *AMP stack to replace the 'nginx' which is asked for in the Puppet 3 book. [SOURCE: https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-6] Commands used:
 			sudo yum install httpd # Installs Apache
 			sudo service httpd start # Starts Apache
 			# THIS COMMAND DID NOT WORK. -> ifconfig eth0 | grep inet | awk '{ print $2 }' # Finds server address.
@@ -49,7 +49,64 @@
 		        TX packets 60  bytes 19176 (18.7 KiB)
 		        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
+	   10:22 -> Installing MariaDB. The command given in the Puppet 3 book for nginx does not work.
+		    Commands used:
+		    sudo yum install mariadb-server
+		    sudo service mariadb start
+	    	    sudo /usr/bin/
+			OK, successfully used password, moving on...
 
+			Setting the root password ensures that nobody can log into the MariaDB root user without the proper authorisation.
+
+			Set root password? [Y/n] Y
+			New password: 
+			Re-enter new password: 
+			Password updated successfully!
+			Reloading privilege tables..
+			 ... Success!
+
+			By default, a MariaDB installation has an anonymous user, allowing anyone to log into MariaDB without having to have a user account created for them.  This is intended only for testing, and to make the installation
+go a bit smoother.  You should remove them before moving into a production environment.
+
+			Remove anonymous users? [Y/n] Y
+			 ... Success!
+
+			Normally, root should only be allowed to connect from 'localhost'.  This ensures that someone cannot guess at the root password from the network.
+
+			Disallow root login remotely? [Y/n] Y
+			 ... Success!
+
+			By default, MariaDB comes with a database named 'test' that anyone can access.  This is also intended only for testing, and should be removed before moving into a production environment.
+
+			Remove test database and access to it? [Y/n] Y
+			 - Dropping test database...
+			 ... Success!
+			 - Removing privileges on test database...
+			 ... Success!
+
+			Reloading the privilege tables will ensure that all changes made so far will take effect immediately.
+
+			Reload privilege tables now? [Y/n] Y	
+			 ... Success!
+
+			Cleaning up...
+
+			All done!  If you've completed all of the above steps, your MariaDB installation should now be secure.
+
+			Thanks for using MariaDB!
+
+	   10:34 -> Installing PHP. Command used:
+			sudo yum install php php-mysql
+
+	   10:42 -> Testing PHP installation.
+		    Commands used:
+		    sudo vi /var/www/html/info.php
+                      <?php
+                	phpinfo();
+                      ?>
+		    (Save and exit) -> :wq
+ 		    (Restart Apache) -> sudo service httpd restart
+		    (Visit homepage in browser) -> 127.0.0.1/info.php
 
 
  
