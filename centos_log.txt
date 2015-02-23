@@ -1,0 +1,26 @@
+2015-02-23 08:42 -> Installed CentOS 7.0 on Virtualbox. After installation on VB, removed the IDE controller file under Storage tab. This is to prevent the installation disk from starting up every time the machine is booted.
+
+           09:17 -> Installing puppet, puppet-server, git, VirtualBox via command line. For details: see below:
+		    PUPPET:
+		    #sudo yum install puppet
+         		#sudo rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+		    #sudo yum install puppet-server
+		    GIT:
+		    #sudo yum install git
+		    VIRTUALBOX: [source: http://wiki.centos.org/HowTos/Virtualization/VirtualBox]
+		    need to add virtualbox repository:
+			#cd /etc/yum/repos.d
+			#sudo wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+		    need to add rpmforge:
+			#sudo yum install rpmforge (ended up using the software center because though the file was in the repo directory, the file could not be found per command line message: sudo wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.3-1.e17.rf.x86_64.rpm)
+		    #sudo yum --enablerepo rpmforge install dkms (Dynamic Kernel Module Support) 
+		    #sudo yum groupinstall "Development Tools"
+		    #sudo yum install kernel-devel
+		    #sudo yum install VirtualBox-4.1
+		    
+2015-02-23 11:21 -> Configuring git
+
+
+
+	   10:04 -> 
+
