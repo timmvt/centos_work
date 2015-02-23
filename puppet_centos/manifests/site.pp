@@ -1,7 +1,12 @@
-node 'demo' {  # PAGE 30
-  file { '/tmp/hello':
-    content => "Hello, world -nodes\n",
+node 'demo' { 
+  package { 'nginx':
+    ensure => installed,
   }
+
+#  file { '/tmp/hello':   # PAGE 30
+#    content => "Hello, world -nodes\n",
+#  }
+
 }
 
 
