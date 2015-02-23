@@ -18,9 +18,13 @@
 		    #sudo yum install kernel-devel
 		    #sudo yum install VirtualBox-4.1
 		    
-2015-02-23 11:21 -> Configuring git
+      	   11:21 -> Configuring git
 
+	   12:04 -> Added SSH key to github account. Everythings working smoothly so far! :)
 
+	   12:17 -> working on puppet + centos (prior puppet work was puppet + ubuntu)
+	   13:45 -> Vagrant installed
 
-	   10:04 -> 
+           13:54 -> Puppet 3 by John Arenlund started
+
 
