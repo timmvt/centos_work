@@ -14,5 +14,18 @@
 
 	   15:10 -> /etc/hosts file altered with first inet address (127.0.0.1) from above
 
+2015-02-24 09:24 -> Have updated the manifests/site.pp file to include what was included in the manifests/nodes.pp file which, according to the Puppet 3 book, uses the IMPORT command. The IMPORT command has been deprecated and so I need to work around this.
+
+	   09:44 -> Ran sudo puppet apply manifests/site.pp and received the following message.
+
+			Notice: Compiled catalog for demo.belkin in environment production in 0.55 seconds
+			Warning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+			(at /usr/share/ruby/vendor_ruby/puppet/type/package.rb:430:in `block (3 levels) in <module:Puppet>')
+
+			Error: Execution of '/bin/yum -d 0 -e 0 -y list nginx' returned 1: Error: No matching Packages to list
+			Error: /Stage[main]/Main/Node[demo]/Package[nginx]/ensure: change from absent to present failed: Execution of '/bin/yum -d 0 -e 0 -y list nginx' returned 1: Error: No matching Packages to list
+			Notice: Finished catalog run in 46.36 seconds
+
+
 
  
