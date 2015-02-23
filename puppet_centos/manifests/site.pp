@@ -1,7 +1,5 @@
 node 'demo' { 
-  package { 'httpd':
-    ensure => installed,
-  }
+  include httpd
 
 #  file { '/tmp/hello':   # PAGE 30
 #    content => "Hello, world -nodes\n",
