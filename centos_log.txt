@@ -25,6 +25,24 @@
 	   12:17 -> working on puppet + centos (prior puppet work was puppet + ubuntu)
 	   13:45 -> Vagrant installed
 
-           13:54 -> Puppet 3 by John Arenlund started
+           13:54 -> Puppet 3 by John Arenlund started -- ALL WORK on puppet_centos_log.txt
+
+2015-02-24 13:47 -> Work on installing and exploring Katello [SOURCE: https://github.com/Katello/katello-deploy/blob/master/README.md]
+		    
+		    Ensure you have Vagrant installed
+		        For libvirt:
+		            Ensure you have the prerequisites installed sudo yum install ruby rubygems gcc
+		            Vagrant 1.6.5+ can be downloaded and installed from Vagrant Downloads
+		        For Virtualbox, Vagrant 1.6.5+ can be downloaded and installed from Vagrant Downloads
+		    Clone this repository - git clone https://github.com/Katello/katello-deploy.git
+		    Enter the repository - cd katello-deploy
+
+		    Install libvirt. On CentOS/Fedora/RHEL, run sudo yum install @virtualization libvirt-devel
+		    Install the libvirt plugin for Vagrant (see vagrant-libvirt page for more information) vagrant plugin install vagrant-libvirt --plugin-version 0.0.20
+		    Make sure your user is in the qemu group. (e.g. [[ ! "$(groups $(whoami))" =~ "qemu" ]] && sudo usermod -aG qemu $(whoami))
+		    Set the libvirt environment variable in your .bashrc or for your current session - export VAGRANT_DEFAULT_PROVIDER=libvirt
+
+		    According to https://github.com/pradels/vagrant-libvirt#installation, Fedora, Red Hat and CentOS need the following code to makr libvert-devel work due to problems building nokogiri and ruby libvert gem.
+ 		    yum install libxslt-devel libxml2-devel libvert-devel
 
 
