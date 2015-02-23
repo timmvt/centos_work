@@ -1,0 +1,13 @@
+.vagrant
+*.swo
+*.swp
+*.swn
+katello-installer
+puppet-*
+katello
+foreman
+boxes.yaml
+plugins
+.idea
+scripts
+repo
