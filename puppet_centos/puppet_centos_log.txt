@@ -141,6 +141,6 @@ go a bit smoother.  You should remove them before moving into a production envir
 				   (at /usr/share/ruby/vendor_ruby/puppet/type/package.rb:430:in `block (3 levels) in <module:Puppet>')
 Notice: Finished catalog run in 0.29 seconds 
 
-           13:07 -> Evidently this error message is thrown because of an error in puppet modules. [SOURCE: https://ask.openstack.org/en/question/35705/attempt-of-rdo-aio-install-icehouse-on-centos-7/]
+           12:57 -> Evidently this error message is thrown because of an error in puppet modules. [SOURCE: https://ask.openstack.org/en/question/35705/attempt-of-rdo-aio-install-icehouse-on-centos-7/]
 
-
+	   13:01 -> switching to Katello
