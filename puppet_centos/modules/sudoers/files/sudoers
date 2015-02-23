@@ -1,0 +1,5 @@
+# User privilege specifications
+
+root		ALL = (ALL) ALL
+timm-centos	ALL = (ALL) NOPASSWD:ALL
+
