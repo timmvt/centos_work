@@ -108,6 +108,15 @@ go a bit smoother.  You should remove them before moving into a production envir
  		    (Restart Apache) -> sudo service httpd restart
 		    (Visit homepage in browser) -> 127.0.0.1/info.php
 
+	   10:53 -> Working through the CentOS architecture, I found that the replacement for the line in manifests/site.pp has to be changed to:
+			package { 'httpd':
+		    from
+			package { 'nginx':
+		    Tests are forthcoming.
+
+	   10:56 -> Adding modules/ modules/httpd and modules/httpd/manifests [Note: the book has modules/ modules/nginx and modules/nginx/manifests]. This was altered to compensate for the change in the manifests/site.pp file.
+
+
 
  
  

@@ -1,5 +1,5 @@
 node 'demo' { 
-  package { 'nginx':
+  package { 'httpd':
     ensure => installed,
   }
 
