@@ -116,7 +116,7 @@ go a bit smoother.  You should remove them before moving into a production envir
 
 	   10:56 -> Adding modules/ modules/httpd and modules/httpd/manifests [Note: the book has modules/ modules/nginx and modules/nginx/manifests]. This was altered to compensate for the change in the manifests/site.pp file.
 
-
+	   11:10 -> Running sudo puppet apply manifests/site.pp and receive an error message that the httpd class cannot be found. Troubleshooting...
 
  
  
