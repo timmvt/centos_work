@@ -118,5 +118,13 @@ go a bit smoother.  You should remove them before moving into a production envir
 
 	   11:10 -> Running sudo puppet apply manifests/site.pp and receive an error message that the httpd class cannot be found. Troubleshooting...
 
+	   11:23 -> ERROR MESSAGE WHEN RUNNING PUPPET APPLY
+			sudo puppet apply --debug manifests/site.pp 
+			[sudo] password for timm-centos: 
+			Debug: Runtime environment: puppet_version=3.7.4, ruby_version=2.0.0, run_mode=user, default_encoding=UTF-8
+			Debug: Loading external facts from /var/lib/puppet/facts.d
+			Error: Could not find class httpd for demo.belkin on node demo.belkin
+			Error: Could not find class httpd for demo.belkin on node demo.belkin
+
  
  
