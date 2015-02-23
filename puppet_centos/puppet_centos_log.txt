@@ -1,0 +1,18 @@
+2015-02-23 14:30 -> Changed hostname from localhost to demo. In terminal, type sudo hostname demo. Then type sudo su -c 'echo demo >/etc/hostname'. Log out and then log back in again.
+
+           14:40 -> Manifests folder created with site.pp and nodes.pp files
+
+	   15:00 -> Type ip addr list |grep 0
+		    Message received:
+		    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+		    inet 127.0.0.1/8 scope host lo
+		    2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000
+		    link/ether 08:00:27:a0:e8:11 brd ff:ff:ff:ff:ff:ff
+		    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic enp0s3
+		    valid_lft 69510sec preferred_lft 69510sec
+		    inet6 fe80::a00:27ff:fea0:e811/64 scope link 
+
+	   15:10 -> /etc/hosts file altered with first inet address (127.0.0.1) from above
+
+
+ 
