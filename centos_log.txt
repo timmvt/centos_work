@@ -58,4 +58,26 @@
 			
 	   15:20 -> Created a script to run this automatically (/usr/local/bin/katello-req-rel) using the code above. I will share this on my git repo shortly.
 
-	   
+	   15:54 -> Trying to use 'vagrant up'. Error message follows:
+			sudo /etc/init.d/vboxdrv setup
+			Stopping VirtualBox kernel modules                         [  OK  ]
+			Uninstalling old VirtualBox DKMS kernel modules            [  OK  ]
+			Trying to register the VirtualBox kernel modules using DKMSError! echo
+			Your kernel headers for kernel 3.10.0-123.el7.x86_64 cannot be found at /lib/modules/3.10.0-123.el7.x86_64/build or /lib/modules/3.10.0-123.el7.x86_64/source.
+                                                           [FAILED]
+			  (Failed, trying without DKMS)
+			Recompiling VirtualBox kernel modules                      [FAILED]
+			  (Look at /var/log/vbox-install.log to find out what went wrong) 
+
+			LOG FILE:
+			cat /var/log/vbox-install.log 
+			Uninstalling modules from DKMS
+			Attempting to install using DKMS
+
+			Creating symlink /var/lib/dkms/vboxhost/4.3.22/source -> /usr/src/vboxhost-4.3.22
+
+			DKMS: add completed.
+			Failed to install using DKMS, attempting to install without
+			Makefile:183: *** Error: unable to find the sources of your current Linux kernel. Specify KERN_DIR=<directory> and run Make again.  Stop.
+
+
