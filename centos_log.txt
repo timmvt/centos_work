@@ -80,4 +80,6 @@
 			Failed to install using DKMS, attempting to install without
 			Makefile:183: *** Error: unable to find the sources of your current Linux kernel. Specify KERN_DIR=<directory> and run Make again.  Stop.
 
+	   16:09 -> Run 'sudo yum install linux-headers-S(uname -r)
 
+ 
