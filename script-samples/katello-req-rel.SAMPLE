@@ -1,0 +1,14 @@
+#! /bin/sh
+
+sudo yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+
+sudo yum -y localinstall http://yum.theforeman.org/nightly/el7/x86_64/foreman-release.rpm
+
+sudo yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+
+sudo yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+
+sudo yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
+
+sudo yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
+
