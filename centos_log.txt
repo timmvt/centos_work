@@ -47,3 +47,15 @@
 
 	   14:54 -> Updated system time and date because it was interfering with github's schedule. Onwards with Katello.
 
+	   15:05 -> Katello installation [SOURCE: http://www.katello.org/docs/installation/index.html]
+		    Code below (for CentOS 7):
+			yum -y localinstall http://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/katello-repos-latest.rpm
+			yum -y localinstall http://yum.theforeman.org/nightly/el7/x86_64/foreman-release.rpm
+			yum -y localinstall http://mirror.pnl.gov/epel/7/x86_64/e/epel-release-7-5.noarch.rpm
+			yum -y localinstall http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
+			yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/v8314/epel-7-x86_64/download/rhscl-v8314-epel-7-x86_64.noarch.rpm
+			yum -y localinstall https://www.softwarecollections.org/en/scls/rhscl/ruby193/epel-7-x86_64/download/rhscl-ruby193-epel-7-x86_64.noarch.rpm
+			
+	   15:20 -> Created a script to run this automatically (/usr/local/bin/katello-req-rel) using the code above. I will share this on my git repo shortly.
+
+	   
