@@ -155,3 +155,7 @@ mkmf.rb can't find header files for ruby at /usr/share/include/ruby.h
 Gem files will remain installed in /home/timm-centos/.gem/ruby/gems/ruby-libvirt-0.5.2 for inspection.
 Results logged to /home/timm-centos/.gem/ruby/gems/ruby-libvirt-0.5.2/ext/libvirt/gem_make.out
 
+	   12:52 -> Ran "vagrant init --force hashicorp/precise64". I used the flag '--force' to overwrite the previous Vagrantfile.
+
+	   13:15 -> Trying to run "sudo katello-installer" but evidently there is not enough room. Shutting down the machine, creating a snapshot and then will resize the drive.
+
