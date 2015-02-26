@@ -162,4 +162,24 @@ Results logged to /home/timm-centos/.gem/ruby/gems/ruby-libvirt-0.5.2/ext/libvir
 	   13:21 -> Ran "VBoxManage modifyhd /home/timm/VirtualBox\ VM/Centos\ 7/Centos\ 7.vdi --resize 64000
 		    Rerunning sudo yum update
 
+	   14:36 -> Running "sudo katello-installer" again.
+		    ERROR MESSAGE BELOW:
+			The installation requires at least 5G of storage.
+			Output of 'facter fqdn' is different from 'hostname -f'
+ 
+			Make sure above command gives the same output. If needed, change the hostname permanently via 'hostname' command and editing appropriate configuration file. (e.g. on Red Hat systems /etc/sysconfig/network).
+
+			If 'hostname -f' still returns unexpected result, check /etc/hosts and put hostname entry in the correct order, for example: 1.2.3.4 full.hostname.com full
+ 
+			Fully qualified hostname must be the first entry on the line 
+			Your system does not meet configuration criteria
+
+	   14:44 -> Type "hostname -f" Output: "demo"
+       		    Type "facter fqdn" Output: "demo.Belkin"
+
+	   14:46 -> Edited the /etc/sysconfig/network file. Changed name to "demo.belkin". On the /etc/hosts file, I changed "demo.Belkin" to "demo.belkin"
+
+	   14:59 -> Ran "sudo katello-installer". Error messages have been removed except that there is not enough space to install it.
+
+
 
