@@ -177,9 +177,9 @@ Results logged to /home/timm-centos/.gem/ruby/gems/ruby-libvirt-0.5.2/ext/libvir
 	   14:44 -> Type "hostname -f" Output: "demo"
        		    Type "facter fqdn" Output: "demo.Belkin"
 
-	   14:46 -> Edited the /etc/sysconfig/network file. Changed name to "demo.belkin". On the /etc/hosts file, I changed "demo.Belkin" to "demo.belkin"
+	   14:46 -> Edited the /etc/sysconfig/network file. Changed name to "demo.belkin". On the /etc/hosts file, I changed "demo.Belkin" to "demo.belkin" [SOURCE: http://www.rackspace.com/knowledge_center/article/centos-hostname-change]
 
 	   14:59 -> Ran "sudo katello-installer". Error messages have been removed except that there is not enough space to install it.
 
-
+	   15:03 -> Working on adding more space to root. The adding of space through VirtualBox to 64GB is not reflected in the Disk Analyzer. VirtualBox has assigned 8GB of memory to each virtual machine. Resizing it in the aforementioned processes to 64GB - no good. 
 
