@@ -84,4 +84,10 @@
 
 	   16:28 -> Ran system update -- allocating more disk space
 
+2015-02-26 11:47 -> Continuing with Katello deployment...
+
+	   12:04 -> Run 'sudo yum install @virtualization libvirt-devel'. SUCCESS.
+		    Run vagrant plugin install vagrant-libvirt --plugin-version 0.0.20. FAILED. 
+		    Run vagrant plugin install vagrant-libvirt. SUCCESS
+
  
