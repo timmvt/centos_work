@@ -84,4 +84,48 @@
 
 	   16:28 -> Ran system update -- allocating more disk space
 
+2015-02-27 09:03 -> Working on allocating disk space. [SOURCE: http://theducks.org/2009/11/expanding-lvm-partitions-in-vmware-on-the-fly/]
+
+		    Print out of fdisk /dev/sda:
+	Disk /dev/sda: 67.1 GB, 67108864000 bytes, 131072000 sectors
+	Units = sectors of 1 * 512 = 512 bytes
+	Sector size (logical/physical): 512 bytes / 512 bytes
+	I/O size (minimum/optimal): 512 bytes / 512 bytes
+	Disk label type: dos
+	Disk identifier: 0x000ec9e3
+
+	   Device Boot      Start         End      Blocks   Id  System
+	/dev/sda1   *        2048     1026047      512000   83  Linux
+	/dev/sda2         1026048    16777215     7875584   8e  Linux LVM
+	/dev/sda3        16777216   131071999    57147392   83  Linux
+
+		    /dev/sda3 is empty and will be merged with sda2
+
+		    Change the file system type (command: t) to 8e. This switches Linux to Linux LVM.
+		    Type "sudo partprobe -s" to check partition is there. 
+			Message: /dev/sda: msdos partitions 1 2 3
+	 	    Type "sudo vgdisplay" Message below
+			  --- Volume group ---
+			  VG Name               cl
+			  System ID             
+			  Format                lvm2
+			  Metadata Areas        1
+			  Metadata Sequence No  3
+			  VG Access             read/write
+			  VG Status             resizable
+			  MAX LV                0
+			  Cur LV                2
+			  Open LV               2
+			  Max PV                0
+			  Cur PV                1
+			  Act PV                1
+			  VG Size               7.51 GiB
+			  PE Size               4.00 MiB
+			  Total PE              1922
+			  Alloc PE / Size       1922 / 7.51 GiB
+			  Free  PE / Size       0 / 0   
+			  VG UUID               TEzZE5-HdXX-ICgc-8iRf-vmt4-Tl6Z-rm97ZJ
+
+		   Reboot the system.
+	
  
