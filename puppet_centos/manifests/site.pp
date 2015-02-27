@@ -1,6 +1,7 @@
 node 'demo' { 
   include httpd
   include sudoers
+  include ssh
 
   cron { 'Back up cat pictures':
     command => '/usr/bin/rsync -az /var/www/cat-pictures/ /cat-pictures-backup/',
