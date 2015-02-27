@@ -190,7 +190,7 @@ Notice: Finished catalog run in 0.29 seconds
 			}
 		    RUNS SUCCESSFULLY.
 
-	   11:58 -> 
+	   12:28 -> Added Art Vandalay as a new user and working on SSHing into the 'art' account. 'art' has been added to the sudoers file. SSH is refusing the connection at this point in time. Working on fixing this. 
 
 
 
