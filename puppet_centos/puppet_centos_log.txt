@@ -144,3 +144,54 @@ Notice: Finished catalog run in 0.29 seconds
            12:57 -> Evidently this error message is thrown because of an error in puppet modules. [SOURCE: https://ask.openstack.org/en/question/35705/attempt-of-rdo-aio-install-icehouse-on-centos-7/]
 
 	   13:01 -> switching to Katello
+
+2015-02-27 10:57 -> Back to Puppet :)
+
+	   11:05 -> Added the following code to manifests/site.pp
+		    	exec { 'Run my arbitrary code':
+			  command => '/bin/echo I ran this arbitrary code on `/bin/date` >/tmp/command.output.txt'
+			  }
+		    Received the following output when running 'cat /tmp/command.output.txt':
+		    [timm-centos@demo puppet_centos]$ cat /tmp/command.output.txt
+		    I ran this command on Fri Feb 27 11:05:13 EST 2015
+
+	   11:15 -> Added the following code to manifests/site.pp
+			exec { 'Get public key for John':
+			  cwd     => '/tmp', 	# cwd is current working directory.
+			  command => '/usr/bin/wget http://bitfieldconsulting.com/files/john.pub',	# 
+			  creates => '/tmp/john.pub'	# creates john.pub in /tmp directory. If the file already exists, the 'exec' function will not be executed. See below:
+
+			[timm-centos@demo puppet_centos]$ papply
+			  Notice: Compiled catalog for demo.belkin in environment production in 1.04 seconds
+			  Notice: /Stage[main]/Main/Node[demo]/Exec[Download public key for John]/returns: executed successfully
+			  Notice: /Stage[main]/Main/Node[demo]/Exec[Run my arbitrary command]/returns: executed successfully
+			  Notice: Finished catalog run in 6.00 seconds
+
+                        [timm-centos@demo puppet_centos]$ papply
+                          Notice: Compiled catalog for demo.belkin in environment production in 0.97 seconds
+                          Notice: /Stage[main]/Main/Node[demo]/Exec[Run my arbitrary command]/returns: executed successfully
+                          Notice: Finished catalog run in 0.45 seconds
+
+		   As one can see, the second run does not execute the code.
+
+	   11:30 -> Trying a sample chaining command code.
+		  	exec { 'step 1':
+			    command => '/bin/echo Hi step 1 run on `/bin/date` >/tmp/testttss.output.txt',
+			}
+
+			exec { 'step 2':
+			    command => '/bin/echo Hi step 2 run on `/bin/date` >/tmp/testtts2.output.txt',
+			    require => Exec['step 1'],
+			}
+
+			exec { 'step 3':
+			    command => '/bin/echo Hi step 3 run on `/bin/date` >/tmp/testtts3.output.txt',
+			    require => Exec['step 2'],
+			}
+		    RUNS SUCCESSFULLY.
+
+	   11:58 -> 
+
+
+
+
