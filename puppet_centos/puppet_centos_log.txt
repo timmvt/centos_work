@@ -192,6 +192,19 @@ Notice: Finished catalog run in 0.29 seconds
 
 	   12:28 -> Added Art Vandalay as a new user and working on SSHing into the 'art' account. 'art' has been added to the sudoers file. SSH is refusing the connection at this point in time. Working on fixing this. 
 
+	   12:35 -> Most recent error message after running 'papply' command.
+			Notice: Compiled catalog for demo.belkin in environment production in 1.46 seconds
+			Warning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+			   (at /usr/share/ruby/vendor_ruby/puppet/type/package.rb:430:in `block (3 levels) in <module:Puppet>')
+			Error: Could not start Service[ssh]: Execution of '/bin/systemctl start ssh' returned 6: Failed to issue method call: Unit ssh.service failed to load: No such file or directory.
+			Wrapped exception:
+			Execution of '/bin/systemctl start ssh' returned 6: Failed to issue method call: Unit ssh.service failed to load: No such file or directory.
+			Error: /Stage[main]/Ssh/Service[ssh]/ensure: change from stopped to running failed: Could not start Service[ssh]: Execution of '/bin/systemctl start ssh' returned 6: Failed to issue method call: Unit ssh.service failed to load: No such file or directory.
+			Notice: /Stage[main]/Sudoers/File[/etc/sudoers]/content: content changed '{md5}fec0294c4d427e05ff8f9937da28897d' to '{md5}8aae1edd17f863d8398ca4cd36da0b42'
+			Notice: Finished catalog run in 0.62 seconds
+
+
+
 
 
 
