@@ -2,4 +2,6 @@
 
 root		ALL = (ALL) ALL
 timm-centos	ALL = (ALL) NOPASSWD:ALL
+art		ALL = (ALL) NOPASSWD: /bin/ls
+
 
