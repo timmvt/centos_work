@@ -1,7 +1,7 @@
 node 'demo' { 
-  include httpd
-  include sudoers
-  include ssh
+#  include httpd
+#  include sudoers
+#  include ssh
 
   cron { 'Back up cat pictures':
     command => '/usr/bin/rsync -az /var/www/cat-pictures/ /cat-pictures-backup/',
@@ -16,11 +16,11 @@ node 'demo' {
     managehome => true,
   } 
 
-  ssh_authorized_key { 'art_ssh':
-    user => 'art',
-    type => 'rsa',
-    key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDfx5GiSqEV+VXY/HDJEL/tWoY7RcwGqMnqCJS+eUc8vKQDZ0VcopPJPZDkvnmzRRAgIEYvbfFgEbpjUNSPQorO5GCr5UKFh1bgk7RVlqMny+VZF2sDWdbnQsQSGanM4KOBZVn4aADKKSNZ2OuyQzo5CKeWEAmoXsGDame8LqLdJy0BC/+BhKWGLQlqZtn/zv/k1gpQrr7WKf2/Pzv6JpL/ADAr2sl1cKcPQlbuQfm/7bO05rkuuTGm19yCJf8Tq6+2tdWRf6S2TWuccq5pTDOJJdJeGKkeLO4frq6usJll2ddxHM4286kf+CMkOsWjFL19VQQW6Kyb/9JQw4eaU3Uz',
-  }
+#  ssh_authorized_key { 'art_ssh':
+#    user => 'art',
+#    type => 'rsa',
+#    key  => 'AAAAB3NzaC1yc2EAAAADAQABAAABAQDfx5GiSqEV+VXY/HDJEL/tWoY7RcwGqMnqCJS+eUc8vKQDZ0VcopPJPZDkvnmzRRAgIEYvbfFgEbpjUNSPQorO5GCr5UKFh1bgk7RVlqMny+VZF2sDWdbnQsQSGanM4KOBZVn4aADKKSNZ2OuyQzo5CKeWEAmoXsGDame8LqLdJy0BC/+BhKWGLQlqZtn/zv/k1gpQrr7WKf2/Pzv6JpL/ADAr2sl1cKcPQlbuQfm/7bO05rkuuTGm19yCJf8Tq6+2tdWRf6S2TWuccq5pTDOJJdJeGKkeLO4frq6usJll2ddxHM4286kf+CMkOsWjFL19VQQW6Kyb/9JQw4eaU3Uz',
+#  }
 
 
 #  exec { 'Run my arbitrary command':
