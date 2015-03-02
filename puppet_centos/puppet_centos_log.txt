@@ -219,5 +219,11 @@ Notice: Finished catalog run in 0.29 seconds
 
 	   09:51 -> I changed the service name to 'sshd' from 'ssh' and now papply runs without error.
 
+	   10:15 -> Working on git error message when trying to commit. 
+		 	git commit -m "Updating puppet_centos_log.txt and replaced 'ssh' with 'sshd' in ~/ssh/manifests/init.pp"
+			error: insufficient permission for adding an object to repository database .git/objects
+			error: Error building trees
 
+	   10:40 -> Used 'git reset --mixed' to unstage all git adds (puppet_centos_log.txt and modules/ssh/manifests/init.pp). Then added the puppet_centos_log.txt, committed a message and pushed to git. No error messages. 
 
+		    Added modules/ssh/manifests/init.pp, tried to commit and received the same error message. 
