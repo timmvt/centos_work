@@ -126,6 +126,8 @@
 			  Free  PE / Size       0 / 0   
 			  VG UUID               TEzZE5-HdXX-ICgc-8iRf-vmt4-Tl6Z-rm97ZJ
 
+2015-03-02 13:38 -> Created new CentOS VM with larger space to deal with future Katello installation.
+
 
 	
  
