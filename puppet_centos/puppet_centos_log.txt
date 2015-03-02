@@ -203,8 +203,21 @@ Notice: Finished catalog run in 0.29 seconds
 			Notice: /Stage[main]/Sudoers/File[/etc/sudoers]/content: content changed '{md5}fec0294c4d427e05ff8f9937da28897d' to '{md5}8aae1edd17f863d8398ca4cd36da0b42'
 			Notice: Finished catalog run in 0.62 seconds
 
+2015-03-02 09:10 -> Working on Puppet 3 in CentOS
+	
+	   09:23 -> When running papply, error message received. See below:
+			Notice: Compiled catalog for demo.belkin in environment production in 1.26 seconds
+			Warning: The package type's allow_virtual parameter will be changing its default value from false to true in a future release. If you do not want to allow virtual packages, please explicitly set allow_virtual to false.
+			  (at /usr/share/ruby/vendor_ruby/puppet/type/package.rb:430:in `block (3 levels) in <module:Puppet>')
+			Error: Could not start Service[ssh]: Execution of '/usr/bin/systemctl start ssh' returned 6: Failed to issue method call: Unit ssh.service failed to load: No such file or directory.
+			Wrapped exception:
+			Execution of '/usr/bin/systemctl start ssh' returned 6: Failed to issue method call: Unit ssh.service failed to load: No such file or directory.
+			Error: /Stage[main]/Ssh/Service[ssh]/ensure: change from stopped to running failed: Could not start Service[ssh]: Execution of '/usr/bin/systemctl start ssh' returned 6: Failed to issue method call: Unit ssh.service failed to load: No such file or directory.
+			Notice: Finished catalog run in 1.18 seconds
 
+	   09:26 -> Checking modules/ssh/manifests/init.pp file
 
+	   09:51 -> I changed the service name to 'sshd' from 'ssh' and now papply runs without error.
 
 
 
