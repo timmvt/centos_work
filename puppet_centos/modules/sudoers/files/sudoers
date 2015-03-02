@@ -1,8 +1,11 @@
-# User privilege specifications
+# This file is managed by Puppet. Any manual changes will be lost.
 
-root		ALL = (ALL) ALL
-timm-centos	ALL = (ALL) NOPASSWD:ALL
-timm		ALL = (ALL) NOPASSWD:ALL
-art		ALL = (ALL) NOPASSWD: /bin/ls
+# Chapter 5 - page 81
 
+# User privilege specification
+
+root    ALL = (ALL) ALL
+timm    ALL = (ALL) NOPASSWD:ALL
+git     ALL = (ALL) NOPASSWD: /bin/ls /usr/local/bin/papply
+art     ALL = (ALL) NOPASSWD: /bin/ls
 
