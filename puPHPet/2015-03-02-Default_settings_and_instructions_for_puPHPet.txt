@@ -1,0 +1,235 @@
+	Sampling a Puppet GUI [SOURCE: https://puphpet.com]
+
+
+		    Settings chosen:
+		   DEPLOY TARGET:
+			(1) Where do you want your local virtual machine?
+			    x	Locally
+			    _	Rackspace
+			    _	Linode
+			    _  	Softlayer
+			    _	Amazon
+			    _	Google
+			    _	Digital Ocean
+			    _	Ikoula Cloud
+
+		 	(2) Local VM Details:
+			    x  	VirtualBox
+			    _	VMWare Fusion
+			    _	VMWare Workstation
+			    _	Parallels Desktop
+
+			(3) Local VM Operating System
+			    x	CentOS 6 x64 (PHP 5.6 5.5 5.4 HHVM)
+			    _	Debian Wheezy 7 x64 (PHP 5.6 5.5 5.4 HHVM)
+			    _	Ubuntu Trusty 14.04 LTS x64 (PHP 5.6 5.5 HHVM)
+			    _ 	Ubuntu Trusty 14.04 LTS x32 (PHP 5.6 5.5 HHVM)
+			    _ 	Ubuntu Precise 12.04 LTS x64 (PHP 5.5 5.4 HHVM)
+
+			(4) Local VM IP Address: 192.168.56.101
+			    Local VM Memory: 2048
+			    Local VM CPU's: 1
+
+			(5) Local VM Forwarded Ports
+			    Host Port: 7356, Box Port: 22
+
+			(6) Sharing Folders with Local VM
+			    Box Sync Folder Source: ./
+			    Box Sync Foler Target: /var/www
+			    Shared Folder Type: 
+			    x	Default
+			    _	NFS
+			    _ 	SMB
+			    _	RSync
+				(NOTE: If you are on OSX or Linux, it is highly recommended you choose "NFS" as the Shared Folder Type, and install the vagrant-bindfs plugin with $ vagrant plugin install vagrant-bindfs. )
+
+		   SYSTEM:
+			(1) Packages: vim-common
+
+			(2) Users & Groups
+				Groups: [left blank]
+				Users: timm
+			
+			(3) Cron Jobs: [none added]
+
+			(4) Custom Files:
+				dotfiles [none added]
+				script files: [none added]
+
+		   FIREWALL RULES:
+			[NOTE: Warning: This is for fairly advanced use! Try to only open ports as you need them. The SSH port (usually 22 and defined in vagrantfile.ssh.port) is automatically opened for you.]
+			(1) [none added]
+
+		   WEB SERVERS:
+			(1) [Can choose between Apache or Nginx or nothing]
+			    x	Apache
+			    _	Nginx
+
+			(2) Modules: rewrite
+	
+			(3) Page Speed Module: [left unchecked]
+
+			(4) Apache Virtual Host:
+			    [NOTE: The following entries can be changed. These are default]
+			    (a) Server Name: awesome.dev
+			    (b) Server Aliases: www.awesome.dev
+			    (c) Document Root: /var/www/awesome
+			    (d) Port: 80
+			    (e) Environment Variables: APP_ENV dev [default]
+		   	    (f) Directory Options: Indexes, FollowSymlinks, Multiviews
+			    (g) Allow Override: All
+			    (h) Require: All, Granted
+			    (i) Custom Directives (inside <Directory> block): [left blank]
+			    (j) Engine: PHP [default]
+			    (k) Custom Directives (inside <Directory> block): [left
+blank]
+			    (l) Enable SSL [left unchecked]
+
+		   LANGUAGES:
+			(1) PHP: 
+			    (a) Quick Settings:
+			    	(i) Install PHP: [checked]
+	  		    	(ii) PHP Version
+				     x   5.6
+				     _   5.5
+				     _   5.4
+			    	(iii) Install Composer: [checked]
+			    	(iv) INI Settings:
+				     display_errors=ON
+				     error_reporting=-1
+				     session.save_path=/var/lib/php/session
+			    	(v) PHP Timezone: America/New York (or what ever time zone you are in)
+			    	(vi) PHP Modules: cli, intl, mcrypt
+			    	(vii) PEAR Modules: [left blank]
+			    	(viii) PECL Modules: pecl_http
+				Use mod_php: [left unchecked]
+			
+			    (b) PHP Libraries:
+			    	(i) Xdebug: [checked]
+			    	(ii) Xhprof: [left unchecked]
+			    	(iii) WP-Cli: [checked] Version: 0.17.1
+			    	(iv) Drush: [checked] Version: 6.3.0
+
+			(2) HHVM:
+			    (a) Quick Settings:
+				(i) Install HHVM: [left unchecked] [NOTE: PHP cannot be installed if HHVM is installed]
+				(ii) Install Nightly: [left unchecked]
+				(iii) Install Composer: [checked]
+				(iv) Host: 127.0.0.1 [default]
+				(v) Listen Port: 9000 [default]
+				(vi) INI Settings:
+				    display_errors=on
+				    error_reporting=-1
+			
+			(3) Ruby:
+			    (a) Quick Settings:
+			    [NOTE:  Ruby 1.9.3 is already installed in PuPHPet boxes using RVM. It is set as the system default version. ]
+
+			    (b) Add New Ruby Version via RVM
+				(i) Set this as system-wide default version. Don't set more than one version as default. [checked]
+				(ii) Choose Version: 2.1.2
+				(iii) Install Bundler: [checked]
+				(iv) Installed Gems: [left blank]
+
+			(4) Node.js:
+			    (a) Quick Settings
+				(i) Install Node.js: [checked]
+				(ii) NPM Packages: [left blank]
+
+			(5) Python:
+			    (a) Quick Settings
+			    [NOTE: Debian and Ubuntu come with Python 2.7, and CentOS comes with Python 2.6 out of the box. ]
+				(i) Installed Packages: [left blank]
+		
+			    (b) Add New Python Version via pyenv: [left blank]
+
+		   DATABASES:	
+			(1) MySQL:
+			    (a) Quick Settings:
+				(i) Install MySQL: [checked]
+				(ii) Root Password: [create one :)]
+				(iii) Install Adminer: [left unchecked]
+
+			    (b) MySQL Create User & Database:
+				(i) Privileges: ALL
+				(ii) DB Name: puppet_centos
+				(iii) DB Host: localhost
+				(iv) Username: timm [or create your own]
+				(v) Password: [create one :)]
+				(vi) Import Database From File: /var/www/sql/puppet_centos.sql 
+
+			(2) PostgreSQL:
+			    (a) Quick Settings:
+				(i) Install PostgreSQL: [left unchecked]
+				(ii) Version:
+					x   9.3
+					_   9.2
+					_   9.1
+					_   8.4
+				(iii) Root Password: [create one :)]
+                                (iv) Install Adminer: [left unchecked]
+
+			(3) MariaDB:
+			    (a) Quick Settings:
+				(i) Install MariaDB: [left unchecked] [NOTE: Installing MySQL instead]
+				(ii) Version:
+					x   10.0  [default]
+					_    5.5
+                                (iii) Root Password: [create one :)]
+                                (iv) Install Adminer: [left unchecked]
+
+			(4) MongoDB:
+			    (a) Quick Settings
+				(i) Install MongoDB: [left unchecked]
+				(ii) Port: 27017 [default]
+
+			(5) Redis:
+			    (a) Quick Settings:
+				(i) Install Redis: [left unchecked]
+				(ii) Listen Port: 6379 [default]
+
+			(6) SQLite:
+			    (a) Quick Settings:
+				(i) Install SQLite: [left unchecked]
+				(ii) Install Adminer: [left unchecked]
+			
+		   ADDITIONAL TOOLS:
+		      	(1) MailCatcher:
+			    (a) Quick Settings:
+				(i) Install MailCatcher: [checked]
+				(ii) HTTP Port: 1080 [default]
+				     [NOTE: available at http://{SERVER_IP_ADDRESS}:{HTTP_PORT}
+				(iii) From Address Method:
+					x   Inline
+					_   Headers
+
+			(2) Work Queues:
+			    (a) Beanstalkd
+				(i) Install Beanstalkd: [checked]
+				(ii) Install Beanstalkd Console: [left unchecked]
+				(iii) Listen Address: 0.0.0.0 [default]
+				(iv) Listen Port: 13000 [default]
+				(v) Max Job Size: 65535 [default]
+				(vi) Max Connections: 1024 [default]
+				(vii) Binlog Directory: /var/lib/beanstalkd/binlog
+
+			    (b) RabbitMQ
+				(i) Install RabbitMQ: [left unchecked]
+				(ii) Listen Port: 5672 [default]
+			
+			(3) Search Servers:
+			    (a) Elastic Search
+				(i) Install Elastic Search: [left unchecked]
+				(ii) Choose Version: 1.4.1 [default]
+		
+			    (b) Apache Solr:
+				(i) Install Apache Solr: [checked]
+				(ii) Choose Version: 4.10.2
+				(iii) Port: 8984 [default]
+				Solr will be available at http://{SERVER_IP_ADDRESS}:{HTTP_PORT}/solr
+
+			Click 'CREATE' then 'GO AHEAD THEN, MAKE IT!' [NOTE: end time for typing this out -> 15:48]
+
+
+
+
