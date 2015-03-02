@@ -227,3 +227,11 @@ Notice: Finished catalog run in 0.29 seconds
 	   10:40 -> Used 'git reset --mixed' to unstage all git adds (puppet_centos_log.txt and modules/ssh/manifests/init.pp). Then added the puppet_centos_log.txt, committed a message and pushed to git. No error messages. 
 
 		    Added modules/ssh/manifests/init.pp, tried to commit and received the same error message. 
+
+	   10:47 -> The previous error message was due to permissions error. I wrote 'sudo chmod a+x modules/ssh/manifests/init.pp' as a stop-gap measure to upload to git. 
+
+	   11:11 -> Encountering errors with SSH. Papply skips loading SSH due to failed dependencies.
+
+	   11:26 -> Renaming ssh to sshd everywhere does not solve the problem.
+
+	   11:38 -> Running out of drive space. Switching to centos to address the issue.
