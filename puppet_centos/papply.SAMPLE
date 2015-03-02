@@ -1,4 +1,6 @@
-# Puppet Apply script from Puppet 3
+### Puppet Apply script from Puppet 3
+### -If used, add to the /usr/local/bin directory
+
 
 #!/bin/sh
 sudo puppet apply /home/timm-centos/git/centos/puppet_centos/manifests/site.pp --modulepath=/home/timm-centos/git/centos/puppet_centos/modules $*
