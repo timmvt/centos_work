@@ -18,4 +18,35 @@ Steps to install on VirtualBox:
 	(c) Select 'Choose a CD/DVD file'. A new window will open. Navigate to where you downloaded the file.
 	(d) Click 'OK'.
 	
+(4) Run the instance.
+
+(5) When the VM starts up, everything is done via the CLI.
+
+(6) I set up the network first to get the Gnome Desktop Manager (gdm). 
+	(a) [root@localhost ~]# cat /etc/sysconfig/network-scripts/ifcfg-eth0
+		The line ONBOOT=no needs to be changed to ONBOOT=yes
+	(b) [root@localhost ~]# vi /etc/sysconfig/network-scripts/ifcfg-eth0
+		Change ONBOOT=no to ONBOOT=yes
+	(c) [root@localhost ~]# service network restart
+
+(7) Installing the GDM
+	[root@localhost ~]# yum groupinstall "Desktop" "Desktop Platform" "X Window System" "Fonts"
+	Make a cup of tea and watch :)
+
+(8) Adding a user (on the CLI)
+	(a) adduser <username>
+	(b) passwd <username> 
+
+(9) Add user to the sudoers file
+	(a) sudo adduser <username> sudo
+
+(10) log into <username> account
+	(a) In order to get the GDM GUI working on every boot, type the following:
+		'sudo vi /etc/inittab'
+	(b) Change the following line:
+		id:3:initdefault:
+	    TO 
+		id:5:initdefault:
+
+(11) Reboot and enjoy :)
 
