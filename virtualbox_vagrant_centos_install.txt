@@ -1,0 +1,38 @@
+2015-03-03 16:25
+
+[SOURCES: https://www.virtualbox.org/wiki/Linux_Downloads
+	  http://wiki.centos.org/HowTos/Virtualization/VirtualBox
+	  http://www.tecmint.com/enable-rpmforge-repository/]
+
+(1) Installing VirtualBox
+	(a) [timm@localhost yum.repos.d]$ sudo wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+		--2015-03-03 17:17:56--  http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+		Resolving download.virtualbox.org... 137.254.120.26
+		Connecting to download.virtualbox.org|137.254.120.26|:80... connected.
+		HTTP request sent, awaiting response... 200 OK
+		Length: 243 [text/plain]
+		Saving to: “virtualbox.repo”
+
+		100%[======================================>] 243         --.-K/s   in 0s      
+
+		2015-03-03 17:18:01 (44.4 MB/s) - “virtualbox.repo” saved [243/243]
+
+	(b) Installing the RPMForge repository (for RHEL/CentOS6 32-64bit)
+		# wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
+		# rpm -Uvh rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
+
+	(c) Install DKMS (Dynamic Kernel Module Support) to help simplify kernel upgrades.
+		Type 'yum install dkms'
+
+	(d) Install VirtualBox
+
+		Type 'yum install VirtualBox-4.1'
+
+(2) Installing Vagrant
+
+	(a) 
+
+
+
+
+
