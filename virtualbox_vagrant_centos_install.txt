@@ -28,9 +28,11 @@
 
 		Type 'yum install VirtualBox-4.1'
 
-(2) Installing Vagrant
+(2) Installing Vagrant [SOURCE: https://www.vagrantup.com/download-archive/v1.7.1.html]
 
-	(a) 
+	(a) Select the applicable version and run through package manager
+
+
 
 
 
