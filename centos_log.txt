@@ -221,4 +221,18 @@ below:
 
 Call to virDomainCreateWithFlags failed: unsupported configuration: Domain requires KVM, but it is not available. Check that virtualization is enabled in the host BIOS, and host configuration is setup to load the kvm modules.
 
-		   ---TROUBLESHOOTING NOW---	
+		   ---TROUBLESHOOTING NOW---
+
+	   12:44 -> SIDEBAR: Updating public key locally and reflecting changes on Github. Scenario follows: [SOURCE: https://help.github.com/articles/error-agent-admitted-failure-to-sign/]
+			(1) ssh-keygen -> private/public key pair created and written to ~/.ssh/id_rsa.pub
+			(2) cat ~/.ssh/id_rsa.pub :: copy what's on the screen
+			(3) go to github.com and under settings go to SSH Keys
+			(4) delete the previous entry for the box you just generated the SSH key, then create a new entry, pasting the contents of ~/.ssh/id_rsa.pub in the Key box. Then save it.
+			(5) # start the ssh-agent in the background
+				eval "$(ssh-agent -s)"
+				# Agent pid 59566
+				ssh-add
+				# Enter passphrase for /home/you/.ssh/id_rsa: [tippy tap]
+				# Identity added: /home/you/.ssh/id_rsa (/home/you/.ssh/id_rsa)
+
+
