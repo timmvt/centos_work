@@ -130,4 +130,23 @@
 
 	   17:03 -> Work on Vagrant setup tomorrow
 	
+2015-03-02 09:02 -> Vagrant Setup on CentOS
+		    PuPHPet zip file has been created with standard settings. [These settings can be found at puPHPet/2015-03-02-Default_settings_and_instructions_for_puPHPet.txt]
+		    Change directory into puPHPet directory.
+		    Running 'sudo yum install vagrant-libvirt'. SUCCESS.
+		    Run 'vagrant up'. ERROR MESSAGE: (below)
+			Bringing machine 'default' up with 'libvirt' provider...
+			==> default: Box 'hashicorp/precise64' could not be found. Attempting to find and install...
+			    default: Box Provider: libvirt
+			    default: Box Version: >= 0
+			==> default: Loading metadata for box 'hashicorp/precise64'
+			    default: URL: https://atlas.hashicorp.com/hashicorp/precise64
+			The box you're attempting to add doesn't support the provider you requested. Please find an alternate box or use an alternate provider. Double-check your requested provider to verify you didn't simply misspell it.
+
+			If you're adding a box from HashiCorp's Atlas, make sure the box is released.
+
+			Name: hashicorp/precise64
+			Address: https://atlas.hashicorp.com/hashicorp/precise64
+			Requested provider: [:libvirt]
  
+
