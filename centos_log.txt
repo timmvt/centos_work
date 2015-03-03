@@ -235,4 +235,4 @@ Call to virDomainCreateWithFlags failed: unsupported configuration: Domain requi
 				# Enter passphrase for /home/you/.ssh/id_rsa: [tippy tap]
 				# Identity added: /home/you/.ssh/id_rsa (/home/you/.ssh/id_rsa)
 
-
+	   14:59 -> Created new CentOS 6 minimal install machine on VirtualBox. Am installing GDM via CLI.
