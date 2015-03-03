@@ -1,0 +1,21 @@
+Steps to install on VirtualBox:
+(1) Get CentOS 6 from repository. http://isoredirect.centos.org/centos/6/isos/x86_64/
+	(a) Place the downloaded file where you would like it to exist.
+
+(2) From VirtualBox,
+	(a) click 'New'.
+	(b) provide a descriptive name, Type: Linux, Version: Red Hat 64-bit.
+	(c) allocate memory.
+	(d) Select 'Create a virtual hard drive now' and then 'Create'.
+	(e) Select '.vdi' [VirtualBox Disk Image].
+	(f) Select 'Dynamically allocated'.
+	(g) Select the amount of disk space you want.
+	(h) Create.
+
+(3) Once created, select your newly created installation. Click 'Settings'. When the Settings window opens:
+	(a) Select the 'Storage' tab
+	(b) Under 'Controller', select 'Empty and then the disc icon.
+	(c) Select 'Choose a CD/DVD file'. A new window will open. Navigate to where you downloaded the file.
+	(d) Click 'OK'.
+	
+
