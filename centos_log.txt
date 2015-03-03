@@ -186,6 +186,8 @@ Trying other mirror.
 		    Changing groups -> sudo chgrp -R vboxusers /opt/vm_boxes
 		    SUCCESS.
 
+		    Installed vStone [SOURCE: http://www.slideshare.net/roidelapluie/vagrant-and-centos7]
+
 		    Now on to Katello and Foreman.
 
 	   10:41 -> 
