@@ -188,7 +188,37 @@ Trying other mirror.
 
 		    Installed vStone [SOURCE: http://www.slideshare.net/roidelapluie/vagrant-and-centos7]
 
-		    Now on to Katello and Foreman.
+	   10:41 -> Using vagrant-libvirt, typed 'vagant up --provider=libvirt [NOTE: the additional --provider=libvirt is to inform Vagrant to use libvirt not VirtualBox]
 
-	   10:41 -> 
-	
+	   11:37 -> 'vagrant up' error message received. See below:
+Vagrant.require_plugin is deprecated and has no effect any longer.
+Use `vagrant plugin` commands to manage plugins. This warning will
+be removed in the next version of Vagrant.
+Bringing machine 'test_vm' up with 'libvirt' provider...
+==> test_vm: Uploading base box image as volume into libvirt storage...
+==> test_vm: Creating image (snapshot of base box volume).
+==> test_vm: Creating domain with the following settings...
+==> test_vm:  -- Name:              centos_work_test_vm
+==> test_vm:  -- Domain type:       kvm
+==> test_vm:  -- Cpus:              1
+==> test_vm:  -- Memory:            512M
+==> test_vm:  -- Base box:          centos64
+==> test_vm:  -- Storage pool:      default
+==> test_vm:  -- Image:             /var/lib/libvirt/images/centos_work_test_vm.img
+==> test_vm:  -- Volume Cache:      default
+==> test_vm:  -- Kernel:            
+==> test_vm:  -- Initrd:            
+==> test_vm:  -- Graphics Type:     vnc
+==> test_vm:  -- Graphics Port:     5900
+==> test_vm:  -- Graphics IP:       127.0.0.1
+==> test_vm:  -- Graphics Password: Not defined
+==> test_vm:  -- Video Type:        cirrus
+==> test_vm:  -- Video VRAM:        9216
+==> test_vm:  -- Command line : 
+==> test_vm: Starting domain.
+There was an error talking to Libvirt. The error message is shown
+below:
+
+Call to virDomainCreateWithFlags failed: unsupported configuration: Domain requires KVM, but it is not available. Check that virtualization is enabled in the host BIOS, and host configuration is setup to load the kvm modules.
+
+		   ---TROUBLESHOOTING NOW---	
