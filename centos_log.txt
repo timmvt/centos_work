@@ -130,7 +130,7 @@
 
 	   17:03 -> Work on Vagrant setup tomorrow
 	
-2015-03-02 09:02 -> Vagrant Setup on CentOS
+2015-03-02 09:02 -> Vagrant Setup on CentOS [NOTE: looked at the CentOS software list for VirtualBox...the only offering is RemoteBox, with 1.5 stars out of 5. Thus, sticking with CLI VirtualBox and Vagrant installation.]
 		    PuPHPet zip file has been created with standard settings. [These settings can be found at puPHPet/2015-03-02-Default_settings_and_instructions_for_puPHPet.txt]
 		    Change directory into puPHPet directory.
 		    Running 'sudo yum install vagrant-libvirt'. SUCCESS.
@@ -149,4 +149,28 @@
 			Address: https://atlas.hashicorp.com/hashicorp/precise64
 			Requested provider: [:libvirt]
  
+	   09:35 -> VIRTUALBOX INSTALLATION [SOURCE: http://barry.coffeesprout.com/virtualbox-vagrant-on-centos/]
+			[Run as root or use 'sudo']
+			yum update
+			yum install binutils qt gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
+			cd /etc/yum.repos.d/
+			wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo - ERROR MESSAGE RECEIVED: Loaded plugins: langpacks
+http://download.virtualbox.org/virtualbox/rpm/el/21/x86_64/repodata/repomd.xml: [Errno 14] HTTP Error 404 - Not Found
+Trying other mirror.
+			yum clean all
+			yum install VirtualBox-4.3 - ERROR MESSAGE RECEIVED:
+				Loaded plugins: langpacks
+				fedora/21/x86_64/metalink                                   |  18 kB  00:00     
+				fedora                                                      | 3.8 kB  00:00     
+				updates/21/x86_64/metalink                                  |  16 kB  00:00     
+				updates                                                     | 4.9 kB  00:00     
+				(1/4): fedora/21/x86_64/group_gz                            | 232 kB  00:05     
+				(2/4): updates/21/x86_64/group_gz                           | 398 kB  00:06     
+				(3/4): updates/21/x86_64/primary_db                         | 5.5 MB  00:04     
+				(4/4): fedora/21/x86_64/primary_db                          |  17 MB  00:12     
+				(1/2): updates/21/x86_64/updateinfo                         | 674 kB  00:06     
+				(2/2): updates/21/x86_64/pkgtags                            | 1.4 MB  00:00     
+				No package VirtualBox-4.3 available.
+				Error: Nothing to do
 
+			
