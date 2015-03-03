@@ -181,5 +181,12 @@ Trying other mirror.
 			sudo vi yum.repos.d/virtualbox.repo
 			Alter baseurl=http://download.virtualbox.org/virtualbox/rpm/el/7.0/x86_64 FROM baseurl=http://download.virtualbox.org/virtualbox/rpm/el/$releasever/$basearch
 
-	   10:29 -> Testing VirtualBox
+	   10:29 -> Testing VirtualBox. Vagrant 1.7.2 already installed.
+		    Creating VM box directory. -> sudo mkdir /opt/vm_boxes
+		    Changing groups -> sudo chgrp -R vboxusers /opt/vm_boxes
+		    SUCCESS.
+
+		    Now on to Katello and Foreman.
+
+	   10:41 -> 
 	
