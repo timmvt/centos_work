@@ -173,4 +173,13 @@ Trying other mirror.
 				No package VirtualBox-4.3 available.
 				Error: Nothing to do
 
-			
+		yum --enablerepo rpmforge dkms
+		yum groupinstall "Development Tools"
+		yum install kernel-devel (if you haven't done it above)
+		yum install VirtualBox-4.3. ERROR MESSAGE RECEIVED: 404 File Not Found
+		    Solution: 
+			sudo vi yum.repos.d/virtualbox.repo
+			Alter baseurl=http://download.virtualbox.org/virtualbox/rpm/el/7.0/x86_64 FROM baseurl=http://download.virtualbox.org/virtualbox/rpm/el/$releasever/$basearch
+
+	   10:29 -> Testing VirtualBox
+	
