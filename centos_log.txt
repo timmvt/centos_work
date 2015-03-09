@@ -236,3 +236,11 @@ Call to virDomainCreateWithFlags failed: unsupported configuration: Domain requi
 				# Identity added: /home/you/.ssh/id_rsa (/home/you/.ssh/id_rsa)
 
 	   14:59 -> Created new CentOS 6 minimal install machine on VirtualBox. Am installing GDM via CLI.
+
+2015-03-04 09:01 -> Articles to research:
+			http://www.osehra.org/blog/automated-vista-installation-and-testing-using-vagrant
+			https://github.com/OSEHRA/VistA/blob/master/Documentation/Install/Vagrant.rst
+			https://github.com/ChristopherEdwards
+			https://groups.google.com/forum/#!topic/hardhats/uqIqqcfKx0A
+
+
