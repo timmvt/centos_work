@@ -9,6 +9,27 @@ node default {
     ensure => running,
     enable => true,
   }
+  file { '/tmp/hosts':
+    ensure => file,
+    owner  => nobody,
+    group  => nobody,
+    mode   => 0444,
+    force  => false,
+    source => 'puppet:///files/hosts',
+  }
+  file { '/tmp/hosts.linked':
+    ensure => link,
+    target => '/tmp/hosts',
+  }
+  file { '/tmp/puppet-files':
+    ensure => directory,
+    owner  => root,
+    group  => root,
+    mode   => 0444,
+    recurse => true,
+    source  => 'puppet:///files',
+  }
+   
 }
 
 node puppetserver inherits default {
