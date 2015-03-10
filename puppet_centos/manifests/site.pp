@@ -29,6 +29,14 @@ node default {
     recurse => true,
     source  => 'puppet:///files',
   }
+  cron { 'clean-up reports':
+    ensure  => present,
+    command => 'find /var/lib/puppet-server/reports -type f -name \* .yaml -mtime +21 -delete',
+    user    => puppet,
+    weekday => 0,
+    hour    => 2,
+    minute  => 11,
+  }
    
 }
 
