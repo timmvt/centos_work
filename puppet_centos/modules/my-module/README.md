@@ -1,4 +1,4 @@
-# module
+# module - CREATED BY PUPPET
 
 #### Table of Contents
 
