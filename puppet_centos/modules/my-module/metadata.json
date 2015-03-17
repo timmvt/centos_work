@@ -1,0 +1,14 @@
+{
+  "name": "my-module",
+  "version": "0.1.0",
+  "author": "timm",
+  "summary": "test module",
+  "license": "Apache 2.0",
+  "source": "/home/timm/git/centos_work/puppet_centos/modules",
+  "issues_url": "nowhere",
+  "project_page": "nowhere",
+  "dependencies": [
+    {"version_requirement":">= 1.0.0","name":"puppetlabs-stdlib"}
+  ]
+}
+
